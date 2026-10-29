@@ -1,6 +1,6 @@
-const prototyingBtn = document.getElementById("prototyingBtn");
-const CADBtn = document.getElementById("CADBtn");
-const semicondutorBtn = document.getElementById("semicondutorBtn");
+const REPAIRSBtn = document.getElementById("REPAIRSBtn");
+const MAINTENANCEBtn = document.getElementById("MAINTENANCEBtn");
+const INSTALLATIONBtn = document.getElementById("INSTALLATIONBtn");
 const MedicalBtn = document.getElementById("MedicalBtn");
 const AerospaceBtn = document.getElementById("AerospaceBtn");
 const shortRunBtn = document.getElementById("shortRunBtn");
@@ -8,35 +8,24 @@ const ServiceCardContent = document.getElementById("ServiceCardContent");
 
 
 
-prototyingBtn.addEventListener("click",function() {
+REPAIRSBtn.addEventListener("click",function() {
     ServiceCardContent.innerHTML = `
-                    <div class="service-card-h3"><h3>Prototyping Services</h3></div>
-                    <div class="service-card-p"><p>Our prototyping process maximizes our shop’s capabilities and capacity to bring your design concepts to life. We work closely alongside your team, using our engineering expertise to recommend refinements and improve manufacturability as needed. Our approach supports both your fast-turnaround machining requirements and need for a high quality product that can be rapidly rolled into production.<br>
-                    All of the abilities and resources of our shop are used in our prototyping method to bring your design ideas to life. We work closely with your team, leveraging our engineering expertise to suggest improvements and improve manufacturability where we can. We deliver a quality product which can be put into production quickly and fulfills your need for rapid turnaround machining. </p></div>
-                    <div class="service-card-h3"><h3>Production Services</h3></div>
-                    <div class="service-card-p"><p>Once you’re happy with the prototype, we can then scale the part into low or high volume production. Our seasoned experience in the semiconductor industry equips us with the skill to hold even micron-level geometric tolerances and preserve critical dimensions (CDs) across bulk part batches. We are also capable of developing our own custom tooling to improve manufacturability and drastically cut down turnaround time. Reducing costs, waste, and turnaround times are our priority while maintaining rigid quality control procedures.</p></div>   
+                    <h3>REPAIRS</h3>
                     `;
                     });
 
 
-CADBtn.addEventListener("click",function() {
+MAINTENANCEBtn.addEventListener("click",function() {
     ServiceCardContent.innerHTML = `
-                    <div class="service-card-h3"> <h3 >CAD / CAM Programming Services</h3> </div>
-                    <div class="service-card-p"><p>Programming complex machining tasks for 5-axis milling  machines across the semiconductor, medical device, and aerospace & defense industries. <br><br>
-                    We work with your manufacturing staff to deliver quality NC codes to keep your machines running and prevent downtime.<br><br>
-                    Our team of talented programmers and engineers have a combined 60+ years of experience.</p> </div>
+                    <h3>MAINTENANCE</h3>
                     `;
                     }); 
                     
                     
-semicondutorBtn.addEventListener("click",function() {
+INSTALLATIONBtn.addEventListener("click",function() {
     ServiceCardContent.innerHTML = `
-                    <h3>Semiconductor Machining Services</h3>
-                    <p>Semiconductor manufacturing requires parts manufactured at tight tolerances and critical dimensions maintained. <br><br>
-                    Our shop specializes in this type of precision machining, with experience producing components that require tolerances down to ±0.0002". Tight geometric tolerances and critical dimensions can be maintained across production runs, helping ensure parts fit and perform as intended. <br><br>
-                    Our 5-axis milling capabilities allow complex geometries to be machined with fewer setups, which helps maintain the relationship between critical features. This is especially useful for components with multiple angled surfaces, deep features, or several dimensions that need to stay closely aligned. From prototype components and engineering samples to repeat production, the machining process can be adjusted around the requirements of each part.<br><br>
-                    A large part of semiconductor machining comes down to consistency. Critical dimensions, surface requirements, and feature locations need to remain stable from one part to the next, particularly when components are being used repeatedly in production equipment. Inspection is performed throughout the process to identify any dimensional changes before they become a larger issue. Our quality processes are based around ISO 9001 requirements, with procedures in place to maintain consistent production and documentation.    
-                    </p>
+                    <h3>INSTALLATION</h3>
+                    
                     `;
                     });                       
 
