@@ -1,0 +1,81 @@
+.why-choose-us{
+    display: block;
+    margin: 60px;
+    padding: 10px;
+}
+.why-choose-us h4{
+    font-weight: 450;
+    font-size: 40px;
+    text-align: center;
+    color: var(--wcu-h4);
+    
+}
+.why-choose-us ul{
+    font-weight: 450;
+    font-size: 25px;
+    text-align: start;
+    color: var(--wcu-h4);
+    list-style: square;
+    
+    
+    
+}
+.why-choose-us li{
+    padding: 10px;
+}
+
+.locations-we-service{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    
+    
+    
+}
+.locations--we-service-list{
+    
+    width: 50%;
+    
+    display:flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+.locations-we-service-map{
+    width: 50%;
+    
+}
+.locations-we-service-map iframe{
+    width: 600px;
+    height: 450px;
+
+    
+}
+.locations-we-service h4{
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    color: var(--locations-we-service-h4);
+
+}
+.locations-we-service ul{
+    font-weight: 450;
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+    color: var(--locations-we-service-p);
+    
+    
+    
+}
+.we-serve{
+    
+    background: url('hero_van') repeat;
+    
+
+}

@@ -23,3 +23,21 @@ if (heroBtn && responsiveForm) {
     });
 
 }
+
+
+const ctaBtnPhone = document.getElementById("ctaBtnPhone");
+ctaBtnPhone.addEventListener('click',()=> {
+    const phoneNumber = '+19728009993';
+    window.location.href = 'tel:${phoneNumber}';
+});
+
+const ctaBtnSchedule = document.getElementById('ctaBtnSchedule');
+ctaBtnSchedule.addEventListener('click',()=> {
+    window.location.href = 'submissions.html'
+});
+
+
+const ctaBtnServices = document.getElementById('ctaBtnServices');
+ctaBtnServices.addEventListener('click',()=> {
+    window.location.href = 'submissions.html'
+});

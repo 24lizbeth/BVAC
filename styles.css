@@ -116,6 +116,8 @@ body {
 --blog-bg:#ffffff;
 --body-tagline4:#ffffff;
 --footer-txt-h3: #4873b3;
+
+--testiminialsTestBoxUL: white;
 }
 
 /*==Resuable CSS===*/
@@ -136,6 +138,7 @@ body{
 .services{
     display: inline-flex;
     background: var(--body-tagline-bg);
+    margin: 15px;
 }
 .repairs, 
 .maintenace, 
@@ -181,11 +184,10 @@ body{
     
   
 }
-.company-pic{
-    
-}
+
 .body-tagline2{
     text-align: center;
+    margin: 20px;
 }
 .body-tagline2 h3{
     font-weight: 600;
@@ -205,10 +207,12 @@ body{
 
 .we-serve{
     display: flex;
+
 }
 
 .testimonialsCard{
     display: block;
+    margin: 50px;
     
 }
 .testimonialsCard h3{
@@ -216,6 +220,10 @@ body{
     font-weight: 600;
     font-size: 25px;
     color: var(--websiteAccnt);
+    text-decoration: underline;
+    text-underline-position: under ;
+    margin: 20px;
+
     
 }
 .testimonialsCard h4{
@@ -236,11 +244,12 @@ body{
     justify-content: center;
     
     
+    
 }
 .testimonialPrvBtn,
 .testimonialNxtBtn{
 background: var(--service-btn);
-border-radius: 0%;
+border-radius: 100%;
 border-color: white;
 font-size: 20px;
 padding: 5px;
@@ -251,6 +260,7 @@ margin-inline: 50px;
     background: var(--body-tagline3-bg);
   
     text-align: center;
+    margin: 20px;
 }
 .body-tagline3 h3{
     font-weight: 600;
@@ -428,8 +438,7 @@ margin-inline: 50px;
 
 
 .about-us{
-    font-size: 30px;
-    font-weight: 500;
+    
     color: var(--website-txt);
     text-align: center;
 }
@@ -437,18 +446,34 @@ margin-inline: 50px;
 .about-us-hero img{
    height:300px;
    width: 100%;
+   margin: 10px;
 }
 
-.about-us-h1{
+.about-us h3{
     display: grid;
     color: var(--about-us-h1);
     text-align: center;
+    font-weight: 450;
+    font-size: 35px;
+    margin: 20px;
     
 }
-.about-us-p{
+.about-us h5{
+    display: grid;
+    color: var(--about-us-h1);
+    text-align: center;
+    font-weight: 450;
+    font-size: 35px;
+    margin-top: 20px;
+    
+}
+.about-us p{
     display: grid;
     color: var(--about-us-h1);
     align-items: center ;
+    font-weight: 450;
+    font-size: 25px;
+    margin-top: 20px;
     
 }
 .about-us img{
@@ -771,6 +796,7 @@ font-size: 23px;
 }
 .body-tagline{
     background: var(--body-tagline-bg);
+    margin: 15px;
 }
 .body-tagline h3{
     text-align: center;
@@ -1263,6 +1289,10 @@ td.service-table-data{
     flex: 200px 1 1 200px;                /* grow, shrink, base width */
     min-width: 180px;
     
+}
+
+.grid-row-2{
+    text-align: center;
 }
 
 /* Headings in each column */
@@ -1974,7 +2004,7 @@ p {
 
     .cus-row-1,
     .cus-row-2,
-    .cus-row-3,
+    .cus-row-3
      {
         display: flex;
         flex-direction: column;
@@ -2422,7 +2452,7 @@ p {
     min-height: 46px;
     padding: 12px 20px;
 }
-
+}
 
 
 
@@ -2666,3 +2696,4 @@ p {
         padding: 20px 10px;
     }
 }
+
