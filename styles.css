@@ -333,21 +333,27 @@ margin-inline: 50px;
     display: grid;
     padding: 5px;
     margin: 5px;
+    width: 33%;
 }
-.blog-section{
+.blog-section-thumbnail-strip{
     display: flex;
     background: var(--blog-bg);
 }
 .blog-section-blocks img{
     max-width: 400px;
-    height: 400px;
+    max-height: 400px;
+    min-width: 400px;
+    min-height: 400px;
     display: block;
     background-color: black;
     margin: auto;
-    
-    
-   
-    
+}
+.blog-section img{
+    min-height: 350px;
+    min-width: 350px;
+    max-width: 350px;
+    max-height: 350px;;
+    border-radius: 0%;
 }
 .blog-section-blocks h1{
     font-weight: 500;
@@ -437,53 +443,7 @@ margin-inline: 50px;
 }
 
 
-.about-us{
-    
-    color: var(--website-txt);
-    text-align: center;
-}
 
-.about-us-hero img{
-   height:300px;
-   width: 100%;
-   margin: 10px;
-}
-
-.about-us h3{
-    display: grid;
-    color: var(--about-us-h1);
-    text-align: center;
-    font-weight: 450;
-    font-size: 35px;
-    margin: 20px;
-    
-}
-.about-us h5{
-    display: grid;
-    color: var(--about-us-h1);
-    text-align: center;
-    font-weight: 450;
-    font-size: 35px;
-    margin-top: 20px;
-    
-}
-.about-us p{
-    display: grid;
-    color: var(--about-us-h1);
-    align-items: center ;
-    font-weight: 450;
-    font-size: 25px;
-    margin-top: 20px;
-    
-}
-.about-us img{
-    height: 300px;
-    width: 300px;
-    border-radius: 100%;
-    background-color: white;
-    display: flex;
-    margin: auto;
-}
 /*===Industries Banner===*/
 .industries-banner{
     color: var(--sub-header-txt);
@@ -763,11 +723,11 @@ font-weight: 500;
     display: block;
 }
 input[type=text]{
-background-color: var(--about-us-bg);
+    background-color: var(--about-us-bg);
 
-border: none;
-border-bottom: .1rem solid white;
-font-size: 23px;
+    border: none;
+    border-bottom: .1rem solid white;
+    font-size: 23px;
 }
 /*===Navigation Bar===*/
 .nav{

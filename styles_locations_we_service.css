@@ -30,7 +30,7 @@
     justify-content: center;
     gap: 40px;
     align-items: center;
-    
+
     
     
 }
@@ -49,11 +49,12 @@
 .locations-we-service-map{
     width: 50%;
     
+    
 }
 .locations-we-service-map iframe{
     width: 600px;
     height: 450px;
-
+    place-items: center;
     
 }
 .locations-we-service h4{
@@ -61,16 +62,17 @@
     font-size: 40px;
     text-align: center;
     color: var(--locations-we-service-h4);
-
+    margin-bottom: 10px;
 }
 .locations-we-service ul{
     font-weight: 450;
     font-size: 30px;
     text-align: center;
-    list-style: none;
+    list-style: square;
     color: var(--locations-we-service-p);
-    
-    
+    display: grid;
+    gap: 10px;
+    justify-content: center;
     
 }
 .we-serve{

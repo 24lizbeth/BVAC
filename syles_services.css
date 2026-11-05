@@ -126,6 +126,8 @@ body {
 --locations-we-service-h4: #ff0707;
 --locations-we-service-p: #ff0707;
 
+
+--common-problems-h4:#ff0707;
 }
 
 /*==Resuable CSS===*/
@@ -143,41 +145,33 @@ body{
 }
 
 /*===Body===*/
-.services{
-    display: inline-flex;
-    background: var(--body-tagline-bg);
-    margin: 15px;
+.services-pg{
+    background: var(--webpage-bg-color);
 }
-.hvac-repairs, 
-.maintenace, 
-.installation,
-.furnice-repairs{
-    border-left: .3rem solid var(--websiteAccnt);
-    padding: 1rem;
-    margin: 1rem;
+.service{
+    display: inline-flex;
+    background: var(--webpage-bg-color);
+    margin: 15px;
+    border-bottom: .3rem solid var(--websiteAccnt);
     padding: 20px;
     
 }
-.hvac-repairs h2, 
-.maintenace h2, 
-.installation h2,
-.furnice-repairs h2{
+.service h2{
     padding-bottom: .5rem;
     font-weight: 450;
     font-size:25px;
-    padding: 20px;
     color: var(--services-h3);
+    width: 400px;
 }
-.hvac-repairs p, 
-.maintenace p, 
-.installation p,
-.furnice-repairs p{
-    padding-inline: 3rem;
+.service p{
+    padding-inline: 0rem;
     font-weight: 400;
     font-size: 20px;
     color: var(--services-p);
     text-decoration: none;
     text-underline-position: under;
+    text-align: start;
+    
 }
 
 .services-pg-banner{
@@ -199,29 +193,19 @@ body{
     padding: 30px;
     text-align: start;
     color: var(--service-pg-banner-p-color);
+   
 }
-.service_textbx{
-    display: grid;
-    margin: auto;
-    border-bottom: solid .4rem var(--websiteAccnt);
-    padding: 50px;
-    border-radius: 15%;
-    
-}
-.service_textbx h4{
-    color: var(--websiteAccnt);
-    font-size: 35px;
-    font-weight: 500;
-    text-align: center;
-    
-}
-
-.service_textbx p{
-    color: var(--website-txt-dark);
-     font-size: 25px;
-    font-weight: 500;
+.servicesPg-services p{
     text-align: start;
 }
+.services-list-conslusion{
+      font-weight: 450;
+    font-size: 30px;
+    padding: 30px;
+    text-align: start;
+    color: var(--service-pg-banner-p-color);
+}
+
 
 .home-page{
     background-color: var(--bg-color);
@@ -260,6 +244,79 @@ body{
 
     display: grid;
 }
+
+.common-problems{
+    display: grid;
+    text-align: center;
+    margin: 10px;
+}
+
+.common-problems h4{
+    font-weight: 450;
+    font-size: 40px;
+    color: var(--common-problems-h4);
+
+}
+
+.common-problems p{
+    font-weight: 450;
+    font-size: 25px;
+    color: var(--common-problems-h4);
+
+}
+
+.faqs{
+    display: grid;
+    margin-bottom: 100px;
+    padding: 10px;
+
+
+}
+.faqs button {
+    font-weight: 450;
+    font-size: 25px;
+    text-align: start;
+    color: var(--wcu-h4);
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.faqs-title h4 {
+    font-weight: 450;
+    font-size: 40px;
+    text-align: center;
+    color: var(--wcu-h4);
+    
+}
+.faqsAnswer {
+    display: none;
+}
+.faqs-item.active .faqsAnswer {
+    display:block;
+
+}
+.faqs-list{
+    display:flex;
+    justify-content: center;
+}
+.faqs ul{
+    
+    
+    background: none;
+    border: none;
+    
+}
+.faqs li{
+    list-style-type: disc;
+    padding: 10px 0;
+    text-align: center;
+}
+
 .why-choose-us{
     display: block;
     margin: 60px;
@@ -335,12 +392,7 @@ body{
     
     
 }
-.we-serve{
-    
-    background: url('hero_van') repeat;
-    
 
-}
 .hero-van{
     
     background: url('hero_van.png') repeat;
@@ -351,47 +403,6 @@ body{
     background: var(--blog-bg);
 }
 
-.blog-section-blocks{
-    display: grid;
-    padding: 5px;
-    margin: 5px;
-}
-.blog-section{
-    display: flex;
-    background: var(--blog-bg);
-}
-.blog-section-blocks img{
-    max-width: 400px;
-    height: 400px;
-    display: block;
-    background-color: black;
-    margin: auto;
-  
-    
-}
-.blog-section-blocks h1{
-    font-weight: 500;
-    font-size: 35px;
-    color: var(--blog-post-h1);
-    padding: 15px;
-    
-    
-}
-.blog-section-blocks p{
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--blog-post-p);
-    padding: 20px;
-    
-    
-    
-}
-.blog-section-title h2{
-     font-weight: 600;
-    font-size: 50px;
-    color: var(--blog-post-h1);
-    text-align: center;
-}
 
 
 

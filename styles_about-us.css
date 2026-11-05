@@ -1,0 +1,151 @@
+.about-us{
+    
+    color: var(--website-txt);
+    text-align: center;
+}
+
+.about-us-hero img{
+   height:300px;
+   width: 100%;
+   margin-bottom: -220px;
+}
+
+.about-us h3{
+    display: grid;
+    color: var(--about-us-h1);
+    text-align: center;
+    font-weight: 450;
+    font-size: 35px;
+    margin: 20px;
+    
+}
+.about-us h5{
+    display: grid;
+    color: var(--about-us-h1);
+    text-align: center;
+    font-weight: 450;
+    font-size: 35px;
+    margin-top: 20px;
+    
+}
+.about-us p{
+    display: grid;
+    color: var(--about-us-h1);
+    align-items: center ;
+    font-weight: 450;
+    font-size: 25px;
+    margin: 10px;
+    margin-top: 20px;
+    line-height: 1.6;
+    
+}
+.owner-about-us img{
+    height: 450px;
+    width: 450px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    margin: auto;
+
+}
+.cus-form-tagline h3{
+    color: var(--secondary-color);
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    
+}
+
+.about-us-section4{
+    display: flex;
+
+}
+
+.responsive-form{
+    width: 50%;
+   justify-items: center;
+}
+.responsive-form form{
+    
+   width: 80%;
+  
+}
+.services-about-us{
+    width: 50%;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+.services-about-us-list ul{
+    display: grid;
+    gap: 50px;
+}
+.services-about-us-h4{
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--website-txt);
+    text-align: start;
+    margin: 4%;
+}
+
+.services-about-us li{
+    font-size: 25px;
+    font-weight: 450;
+    color: var(--website-txt);
+    text-align: start;
+    
+    
+}
+
+.faqs{
+    display: grid;
+    margin-bottom: 100px;
+    padding: 10px;
+
+
+}
+.faqs button {
+    font-weight: 450;
+    font-size: 25px;
+    text-align: start;
+    color: var(--wcu-h4);
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.faqs-title h4 {
+    font-weight: 450;
+    font-size: 40px;
+    text-align: center;
+    color: var(--wcu-h4);
+    
+}
+.faqsAnswer {
+    display: none;
+}
+.faqs-item.active .faqsAnswer {
+    display:block;
+
+}
+.faqs-list{
+    display:flex;
+    justify-content: center;
+}
+.faqs ul{
+    
+    
+    background: none;
+    border: none;
+    
+}
+.faqs li{
+    list-style-type: disc;
+    padding: 10px 0;
+    text-align: center;
+}
