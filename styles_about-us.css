@@ -168,3 +168,461 @@
     padding: 10px 40px;
     text-align: start;
 }
+
+/* =========================================
+   ABOUT US PAGE - MOBILE OPTIMIZATION
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Global adjustments */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .about-us-hero {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us-hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        max-height: 300px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    /* =========================
+       ABOUT SECTION
+    ========================= */
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 25px 18px;
+        margin: 0;
+    }
+
+    .owner-about-us {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 15px auto 25px;
+    }
+
+    .owner-about-us img {
+        display: block;
+        width: min(75vw, 300px);
+        height: min(75vw, 300px);
+        max-width: 300px;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .about-us-card {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .about-us h5 {
+        display: block;
+        width: 100%;
+        font-size: clamp(23px, 5vw, 30px);
+        line-height: 1.3;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .about-us p {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.75;
+        margin: 12px auto;
+        text-align: left;
+    }
+
+    /* =========================
+       SERVICES + CONTACT FORM
+    ========================= */
+
+    .about-us-section4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 25px 18px;
+        gap: 30px;
+    }
+
+    .services-about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .services-about-us-h4 {
+        width: 100%;
+        margin: 0 0 15px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .services-about-us-list {
+        width: 100%;
+    }
+
+    .services-about-us-list ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 14px;
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+    }
+
+    .services-about-us li {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* =========================
+       CONTACT FORMS
+    ========================= */
+
+    .responsive-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 25px 18px;
+        margin: 0 auto;
+        gap: 18px;
+    }
+
+    .responsive-form h4,
+    .responsive-form h5 {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .responsive-form .contact-us {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 500px;
+        gap: 14px;
+        margin: 0 auto;
+    }
+
+    .responsive-form .contact-us br {
+        display: none;
+    }
+
+    .responsive-form .cus-row-1,
+    .responsive-form .cus-row-2,
+    .responsive-form .cus-row-3,
+    .responsive-form .cus-row-4 {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .responsive-form .contact-us input {
+        width: 100%;
+        min-width: 0;
+        height: 50px;
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+
+    .responsive-form .cus-row-3 input {
+        flex: 1;
+    }
+
+    .responsive-form .cus-submit-btn {
+        width: 100%;
+        min-height: 50px;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .responsive-form .cus-form-tagline {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .responsive-form .cus-form-tagline h3 {
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* =========================
+       WHY CHOOSE US
+    ========================= */
+
+    .why-choose-us {
+        width: 100%;
+        margin: 0;
+        padding: 35px 20px;
+    }
+
+    .why-choose-us h4 {
+        font-size: 25px;
+        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .why-choose-us ul {
+        width: 100%;
+        padding-left: 22px;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .why-choose-us li {
+        padding: 9px 0;
+    }
+
+    /* =========================
+       SERVICE LOCATIONS + MAP
+    ========================= */
+
+    .locations-we-service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 35px 18px;
+        gap: 25px;
+    }
+
+    .locations-we-service-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .locations-we-service h4 {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .locations-we-service ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding-left: 22px;
+        margin: 0;
+        gap: 10px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .locations-we-serve-map {
+        width: 100%;
+    }
+
+    .locations-we-serve-map iframe {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        margin: 0 auto;
+        border: 0;
+    }
+
+    /* =========================
+       FAQ SECTION
+    ========================= */
+
+    .faqs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 30px 16px;
+        margin: 0 0 30px;
+    }
+
+    .faqs-title h4 {
+        font-size: 27px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .faqs-list {
+        display: flex;
+        width: 100%;
+    }
+
+    .faqs ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .faqs li {
+        width: 100%;
+        padding: 8px 0;
+        list-style: none;
+    }
+
+    .faqs-item {
+        width: 100%;
+    }
+
+    .faqs button {
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        padding: 12px 14px;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .faqsAnswer {
+        width: 100%;
+        padding: 10px 14px;
+    }
+
+    .faqsAnswer p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    /* =========================
+       FINAL CONTACT SECTION
+    ========================= */
+
+    .body-tagline4 {
+        width: 100%;
+        padding: 35px 18px;
+        text-align: center;
+    }
+
+    .body-tagline4 h3 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .body-tagline4 > .cta-btn {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+        min-height: 48px;
+        margin: 12px auto;
+    }
+
+    .body-tagline4 > p {
+        margin: 25px 0 10px;
+        font-size: 16px;
+    }
+
+    .body-tagline4 .responsive-form {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .about-us-hero img {
+        max-height: 220px;
+    }
+
+    .about-us {
+        padding: 20px 15px;
+    }
+
+    .owner-about-us img {
+        width: 230px;
+        height: 230px;
+        margin-top: -100px;
+    }
+
+    .about-us h5 {
+        font-size: 23px;
+    }
+
+    .about-us p {
+        font-size: 14px;
+    }
+
+    .about-us-section4 {
+        padding: 20px 14px;
+    }
+
+    .services-about-us li {
+        font-size: 15px;
+    }
+
+    .why-choose-us {
+        padding: 28px 16px;
+    }
+
+    .locations-we-service {
+        padding: 28px 14px;
+    }
+
+    .locations-we-serve-map iframe {
+        height: 260px;
+    }
+
+    .faqs {
+        padding: 25px 12px;
+    }
+
+    .faqs button {
+        font-size: 14px;
+    }
+
+    .body-tagline4 {
+        padding: 28px 14px;
+    }
+}
