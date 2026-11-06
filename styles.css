@@ -5,6 +5,8 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: Montserrat;
+    scrollbar-width:thin;
+   
 }
 
 
@@ -34,7 +36,7 @@ body {
 --cus-bg-color: #061838;
 --cus-btn-bg: #bacef3;
 --primary-color:#364c6e;
---webpage-bg-color: none;
+--webpage-bg-color: #061838;
 --secondary-color:#444043;
 --hover-bg-color:#061838;
 --cta-bg: #061838;
@@ -100,10 +102,10 @@ body {
 --services-section-title-bg: #061838;
 --services-banner-h1: #ffffff;
 
---websiteAccnt: #399fe2;
+
 --body-tagline-bg: #ffffff;
---services-h3:  #061838;
---services-p:  #07285f;
+
+
 --body-tagline2-h3: #ffffff;
 --body-tagline2-p: #b9b1b1;
 --body-tagline3-bg:#ffffff;
@@ -116,8 +118,19 @@ body {
 --blog-bg:#ffffff;
 --body-tagline4:#ffffff;
 --footer-txt-h3: #4873b3;
+--service-pg-banner-h3: #ffffff;
+--service-pg-banner-p-color: #fafafa;
 
 --testiminialsTestBoxUL: white;
+--services-h3: #061838;
+--services-p: #ffffff;
+
+--services-conclusion-p: black;
+--websiteAccnt: #5c8dad;
+--websiteAccnt2:#b28e69;
+--websiteAccnt3:#a29e9e;
+
+
 }
 
 /*==Resuable CSS===*/
@@ -140,29 +153,7 @@ body{
     background: var(--body-tagline-bg);
     margin: 15px;
 }
-.repairs, 
-.maintenace, 
-.installation{
-    border-top: .2rem solid var(--websiteAccnt);
-    padding: 1rem;
-    margin: 1rem;
-}
-.repairs h2, 
-.maintenace h2, 
-.installation h2{
-    padding-bottom: .5rem;
-    font-weight: 450;
-    font-size:25px;
-    color: var(--services-h3);
-}
-.repairs p, 
-.maintenace p, 
-.installation p{
-    padding-bottom: .5rem;
-    font-weight: 400;
-    font-size: 20px;
-    color: var(--services-p);
-}
+
 .home-page{
     background-color: var(--bg-color);
     background-size: cover;
@@ -187,19 +178,21 @@ body{
 
 .body-tagline2{
     text-align: center;
-    margin: 20px;
+    margin-bottom: 20px;
 }
 .body-tagline2 h3{
     font-weight: 600;
     font-size: 60px;
-    color: var(--body-tagline2-h3);
-    margin: 15px;
+    color: var(--websiteAccnt2);
+    margin-bottom: 15px;
 }
 .body-tagline2 p{
     font-weight: 350;
     font-size: 20px;
     color: var(--body-tagline2-p);
-    margin: 15px;
+    margin: auto;
+    text-align: center;
+
 }
 .body-tagline2 button{
     margin: 30px;
@@ -212,7 +205,7 @@ body{
 
 .testimonialsCard{
     display: block;
-    margin: 50px;
+    margin-top: 50px;
     
 }
 .testimonialsCard h3{
@@ -220,7 +213,7 @@ body{
     font-weight: 600;
     font-size: 25px;
     color: var(--websiteAccnt);
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-position: under ;
     margin: 20px;
 
@@ -229,13 +222,17 @@ body{
 .testimonialsCard h4{
     text-align: center;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--website-txt);
+    margin:auto;
+}
+.testimonialsTitle h3{
+    display: none;
 }
 .testimonialsCard p{
     text-align: center;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     color: var(--websiteAccnt);
     
 }
@@ -248,25 +245,37 @@ body{
 }
 .testimonialPrvBtn,
 .testimonialNxtBtn{
-background: var(--service-btn);
-border-radius: 100%;
-border-color: white;
-font-size: 20px;
+background: none;
+border: none;
+border-color: none;
+font-size: 35px;
 padding: 5px;
 color: var(--service-btn-txt);
 margin-inline: 50px;
 }
-.body-tagline3{
+.index-services{
     background: var(--body-tagline3-bg);
   
     text-align: center;
     margin: 20px;
 }
+.tagline2-cta-btn{
+    text-align: center;
+}
+.body-tagline3{
+    background: var(--body-tagline3-bg);
+    
+    text-align: center;
+    margin: 10px;
+    padding-top: 25px;
+}
+
 .body-tagline3 h3{
     font-weight: 600;
     font-size: 50px;
     color: var(--body-tagline3-h3);
     text-align: center;
+    padding: 10px;
 }
 
 .body-tagline3 p{
@@ -276,7 +285,7 @@ margin-inline: 50px;
     text-align: center;
 }
 .body-tagline3 button{
-    margin: 50px;
+    margin: 20px;
     background: var(--service-btn);
     border: .2rem solid var(--websiteAccnt);
     color: var(--websiteAccnt)
@@ -286,13 +295,14 @@ margin-inline: 50px;
     max-width:100%;
     margin-bottom: 20px;
     margin-top: 20px;
+    padding: 25px;
 
 }
 .trust-card{
-    display: block;
+    display: grid;
     width: 50%;
-    height: 200px;
-    margin: 40px;
+    height: auto;
+    margin: 0px;
     padding: 20px;
      
 }
@@ -324,60 +334,6 @@ margin-inline: 50px;
     text-align: start;
 }
 
-.blog-section-title{
-    text-align: center;
-    background: var(--blog-bg);
-}
-
-.blog-section-blocks{
-    display: grid;
-    padding: 5px;
-    margin: 5px;
-    width: 33%;
-}
-.blog-section-thumbnail-strip{
-    display: flex;
-    background: var(--blog-bg);
-}
-.blog-section-blocks img{
-    max-width: 400px;
-    max-height: 400px;
-    min-width: 400px;
-    min-height: 400px;
-    display: block;
-    background-color: black;
-    margin: auto;
-}
-.blog-section img{
-    min-height: 350px;
-    min-width: 350px;
-    max-width: 350px;
-    max-height: 350px;;
-    border-radius: 0%;
-}
-.blog-section-blocks h1{
-    font-weight: 500;
-    font-size: 35px;
-    color: var(--blog-post-h1);
-    padding: 15px;
-    
-    
-}
-.blog-section-blocks p{
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--blog-post-p);
-    padding: 20px;
-    
-    
-    
-}
-.blog-section-title h2{
-     font-weight: 600;
-    font-size: 50px;
-    color: var(--blog-post-h1);
-    text-align: center;
-}
 .body-tagline4{
     text-align: center;
 }
@@ -444,187 +400,114 @@ margin-inline: 50px;
 
 
 
-/*===Industries Banner===*/
-.industries-banner{
-    color: var(--sub-header-txt);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    max-width: 50%;
-    justify-content: center;
-}
-
 /*===Services Section===*/
-.services-header{
-    color: var(--sub-header-txt);
-    padding-left: 2rem;
-    justify-content: center;
+
+
+
+
+.services-pg{
+    background: var(--webpage-bg-color);
+}
+.service{
+    display: grid;
+    background: none;
+    margin: 15px;
+    border-left: .25rem solid var(--websiteAccnt);
+    padding: 20px;
     
 }
-.services-banner h1{
-    text-align: center;
-    color: var(--services-banner-h1);
-    font-size: 40px;
+.service-title a{
+    padding-bottom: .5rem;
+    font-weight: 450;
+    font-size: 35px;
+    color: var(--services-h3);
+    width: 20%;
+    
 }
-.services-section{
-    justify-content: center;
-    background-color: var(--services-bg);
-    color: var(--services-card-txt);
-    padding: 20px;
-    width: 100%;
-    display: grid;
+.service p{
+    padding-inline: 40px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--services-p);
+    text-decoration: none;
+    text-underline-position: under;
+    text-align: start;
+   
+    
+}
+.services-list-conslusion p{
+    padding-inline: 40px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--services-conclusion-p);
+    text-decoration: none;
+    text-underline-position: under;
+    text-align: start;
+}
+
+
+.service-pg-banner h3{
+    font-weight: 550;
+    font-size: 40px;
+    padding: 25px;
+    color: var(--websiteAccnt);
+    text-align: center;
+  
+}
+
+.service-pg-banner p{
+    font-weight: 450;
+    font-size: 30px;
+    padding: 30px;
+    text-align: start;
+    color: var(--service-pg-banner-p-color);
    
 }
-.card{
-    display: block;
-}
-.services-list li a{
-    color:var(--services-li-a);
-}
-.services-list{
-    width:100%;
-    height: 100%
-}
-.services-card{
+
+.servicesPg-services{
     display: grid;
-    width: 100%;
 }
-.service-1{
-   padding: 10%;
-}
-.service-2{
-   padding: 10%;
-}
-.service-3{
-   padding: 10%;
-}
-.service-4{
-  padding: 10%; 
-}
-.service-5{
-   padding: 10%;
-}
-.service-6{
-   padding: 10%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*===Service Cards===*/
-
-.service-card-content{
-    display: inline-block;
-    margin-bottom: 15px;
-    background-color: var(--service-card-content);
-    padding: 0px;
-    width: 100%
-}
-
-
-.services-card-container{
-    display: grid;
-    gap: 1px;
-    justify-content: center;
-    width: 100%;
-}
-.card-title{
-    color: var(--card-title-txt);
-    justify-content: center;
-    background-color: var(--card-title-bg);
-    display: grid;
-    padding: 10px;
-    width: 100%;
-    
-}
-.card-title h3{
-    color: var(--card-title-txt);
-    font-size: 50px;
-    font-weight: 500;
-    
-}
-
-.card{
-    padding: 0px;
-    background: none;
-    max-width: 100%;
-    justify-content: center;
-}
-.card-content-p{
-    color: var(--services-card-txt);
-    padding: 2%;
-    font-size: 16px;
-    font-weight: 500;
-    vertical-align: top;
-    height: 80%;
-    
-}
-.card-content-bx{
-    color: var(--services-card-txt);
-    font-size: 28px;
-    font-weight: 500;
-    text-align: left;
+.services-toprow, .services-bottomrow{
     display: flex;
-    
-    
-    
+    justify-content: center;
 }
-.service-card-h3 {
-    margin-top: auto;
-    color: var(--services-card-txt);
-    font-size: 35px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+.servicesPg-services p{
+    text-align: start;
 }
-
-
-
-.card-content{
-display: flex;
-vertical-align: middle;
-
-max-width: 1700px;
-
+.services-list-conslusion{
+      font-weight: 450;
+    font-size: 30px;
+    padding: 30px;
+    text-align: start;
+    color: var(--service-pg-banner-p-color);
 }
 
-.card-content-cad img{
-    display: block;
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-    
-}
 
-.services-list{
- display: grid;
- justify-content: center;
- background: var(--services-li-bg);
- max-width: 500px;
- 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*==Our Services===*/
 
 
@@ -750,19 +633,33 @@ input[type=text]{
 .hero-tagline h3{
     text-align: center;
     font-size: 60px;
-    font-weight: 1000;
-    color: var(--websiteAccnt);
+    font-weight: 700;
+    color: var(--websiteAccnt3);
+
+}
+.hero-tagline .span1{
+    text-align: center;
+    font-size: 75px;
+    font-weight: 700;
+    color: var(--websiteAccnt2);
+
+}
+.hero-tagline .span2{
+    text-align: center;
+    font-size: 75px;
+    font-weight: 700;
+    color: var(--websiteAccnt3);
 
 }
 .body-tagline{
     background: var(--body-tagline-bg);
-    margin: 15px;
+    margin: 0px;
 }
 .body-tagline h3{
     text-align: center;
     font-size: 60px;
-    font-weight: 1000;
-    color: var(--websiteAccnt);
+    font-weight: 600;
+    color: var(--websiteAccnt2);
 }
 /* Main navigation layout */
 #navMenu {
@@ -867,49 +764,7 @@ color: var(--nav-bar-items);
 
 
 
-/*===our work===*/
-.service-cards-container{
-    width: 100%;
-    background: var(--services-section-title-bg);
-}
-.services-section{
-    background: var(--services-section);
-    width:100%;
-}
 
-.OW-img-card img{
-    display: grid;
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    padding: 2px;
-    
-}
-.OW-img-card-row-1{
-    display: inline-flex;
-    padding: 2px;
-
-}
-.OW-img-card-row-2{
-    display: inline-flex;
-    padding: 2px;
-
-}
-.OW-img-card-row-3{
-    display: inline-flex;
-    padding: 2px;
-
-}
-.OW-img-card-row-4{
-    display: inline-flex;
-    padding: 2px;
-
-}
-.OW-img-card-row-5{
-    display: inline-flex;
-    padding: 2px;
-
-}
 
 /*===Sub Dropdown===*/
 .nav-main-menu .sub-dropdown-content{

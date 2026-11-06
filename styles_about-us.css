@@ -117,6 +117,7 @@
     border: none;
     text-decoration: underline;
     text-underline-position: under;
+    padding: 10px 0;
 }
 
 .faqs-title h4 {
@@ -131,11 +132,12 @@
 }
 .faqs-item.active .faqsAnswer {
     display:block;
+     justify-content: start;
 
 }
 .faqs-list{
     display:flex;
-    justify-content: center;
+    justify-content: start;
 }
 .faqs ul{
     
@@ -146,6 +148,6 @@
 }
 .faqs li{
     list-style-type: disc;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 40px;
+    text-align: start;
 }
