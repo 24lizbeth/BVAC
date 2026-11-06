@@ -1,20 +1,30 @@
+
+.root{
+--websiteAccnt: #5c8dad;
+--websiteAccnt2:#b28e69;
+--websiteAccnt3:#a29e9e;
+
+}
+
+
 .why-choose-us{
     display: block;
     margin: 60px;
     padding: 10px;
 }
 .why-choose-us h4{
-    font-weight: 450;
+    font-weight: 500;
     font-size: 40px;
     text-align: center;
-    color: var(--wcu-h4);
+    color: var(--websiteAccnt);
+
     
 }
 .why-choose-us ul{
     font-weight: 450;
     font-size: 25px;
     text-align: start;
-    color: var(--wcu-h4);
+    color: var(--websiteAccnt2);
     list-style: square;
     
     
@@ -61,7 +71,7 @@
     font-weight: 500;
     font-size: 40px;
     text-align: center;
-    color: var(--locations-we-service-h4);
+    color: var(--websiteAccnt2);
     margin-bottom: 10px;
 }
 .locations-we-service ul{
@@ -69,7 +79,7 @@
     font-size: 30px;
     text-align: center;
     list-style: square;
-    color: var(--locations-we-service-p);
+    color: var(--websiteAccnt3);
     display: grid;
     gap: 10px;
     justify-content: center;

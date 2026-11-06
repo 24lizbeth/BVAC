@@ -5,7 +5,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: Montserrat;
-    scrollbar-width:thin;
+   
    
 }
 
@@ -408,17 +408,24 @@ margin-inline: 50px;
 .services-pg{
     background: var(--webpage-bg-color);
 }
+
+.servicesBx{
+background: white;
+margin: 20px;
+
+}
 .service{
     display: grid;
     background: none;
     margin: 15px;
-    border-left: .25rem solid var(--websiteAccnt);
+    border-left: .25rem solid var(--websiteAccnt2);
+    border-bottom: .25rem solid var(--websiteAccnt2);
     padding: 20px;
     
 }
 .service-title a{
     padding-bottom: .5rem;
-    font-weight: 450;
+    font-weight: 5000;
     font-size: 35px;
     color: var(--services-h3);
     width: 20%;
@@ -426,7 +433,7 @@ margin-inline: 50px;
 }
 .service p{
     padding-inline: 40px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 25px;
     color: var(--services-p);
     text-decoration: none;
@@ -437,7 +444,7 @@ margin-inline: 50px;
 }
 .services-list-conslusion p{
     padding-inline: 40px;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 25px;
     color: var(--services-conclusion-p);
     text-decoration: none;
@@ -508,36 +515,6 @@ margin-inline: 50px;
 
 
 
-/*==Our Services===*/
-
-
-.card-content-bx{
-display: grid;
-vertical-align: middle;
-padding: 3%;
-object-fit: contain;
-
-}
-
-.service-btn{
-
-background: var(--service-btn);
-border-radius: 0%;
-border-color: white;
-font-size: 20px;
-padding: 5%;
-color: var(--service-btn-txt);
-}
-
-.service-btn:hover {
-
-background: var(--service-btn);
-border-radius: 0%;
-border-color: rgb(14, 13, 13);
-font-size: 20px;
-padding: 5%;
-font-weight: 500;
-}
 /*==Contact Us Form===*/
  .responsive-form{
   position: relative;
@@ -653,7 +630,7 @@ input[type=text]{
 }
 .body-tagline{
     background: var(--body-tagline-bg);
-    margin: 0px;
+    margin: 20px;
 }
 .body-tagline h3{
     text-align: center;
@@ -1003,44 +980,6 @@ font-size: 25px;
 
 
 
-/*===Services by Industry Section===*/
-.Service-Tables{
-    display: flex;
-    justify-content: center;
-}
-.Haas-3-table, .Haas-2-table, .Haas-4-table, .Haas-mini-table {
-    background: var(--webpage-bg-color);
-    margin-top: 1px;
-    margin-left: 1px;
-    margin-right: 1px;
-    align-items: center;
-    border-spacing: 1px;
-    display: block;
-    padding: 3%
-   
-}
-.service-table-row{
-    background: none;
-    justify-content: center;
-  
-}
-.service-table-header{
-    font-size: 20px;
-    color: var(--link-color);
-    display: block;
-}
-.service-table-data{
-    font-size: 15px;
-    color: var(--link-color);
-    
-}
-
-td.service-table-data{
-    justify-content: center;
-    
-  
-    
-}
 /*===CTA Section===*/
 .cta-section, cta-section *{
     box-sizing: border-box;

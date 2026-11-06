@@ -1,3 +1,20 @@
+
+
+
+/*==Variables===*/
+:root{
+--websiteAccnt: #5c8dad;
+--websiteAccnt2:#b28e69;
+--websiteAccnt3:#a29e9e;
+
+}
+
+
+
+
+
+
+
 .about-us{
     
     color: var(--website-txt);
@@ -12,7 +29,7 @@
 
 .about-us h3{
     display: grid;
-    color: var(--about-us-h1);
+    color: var(--websiteAccnt);
     text-align: center;
     font-weight: 450;
     font-size: 35px;
@@ -21,16 +38,16 @@
 }
 .about-us h5{
     display: grid;
-    color: var(--about-us-h1);
+    color: var(--websiteAccnt2);
     text-align: center;
-    font-weight: 450;
-    font-size: 35px;
+    font-weight: 550;
+    font-size: 40px;
     margin-top: 20px;
     
 }
 .about-us p{
     display: grid;
-    color: var(--about-us-h1);
+    color: var(--website-txt);
     align-items: center ;
     font-weight: 450;
     font-size: 25px;
@@ -49,7 +66,7 @@
 
 }
 .cus-form-tagline h3{
-    color: var(--secondary-color);
+    color: var(--websiteAccnt2);
     font-size: 17px;
     font-weight: 400;
     text-align: center;
@@ -84,7 +101,7 @@
 .services-about-us-h4{
     font-size: 30px;
     font-weight: 400;
-    color: var(--website-txt);
+    color: var(--websiteAccnt);
     text-align: start;
     margin: 4%;
 }
@@ -92,7 +109,7 @@
 .services-about-us li{
     font-size: 25px;
     font-weight: 450;
-    color: var(--website-txt);
+    color: var(--websiteAccnt2);
     text-align: start;
     
     
@@ -109,13 +126,13 @@
     font-weight: 450;
     font-size: 25px;
     text-align: start;
-    color: var(--wcu-h4);
+    color: var(--websiteAccnt2);
     cursor: pointer;
     height: auto;
     width: 100%;
     background: none;
     border: none;
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-position: under;
     padding: 10px 0;
 }
@@ -124,7 +141,7 @@
     font-weight: 450;
     font-size: 40px;
     text-align: center;
-    color: var(--wcu-h4);
+    color: var(--website-txt);
     
 }
 .faqsAnswer {

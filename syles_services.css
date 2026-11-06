@@ -159,7 +159,7 @@ body{
     display: grid;
     background: var(--webpage-bg-color);
    
-    border-bottom: .3rem solid var(--websiteAccnt);
+    border-bottom: .3rem solid var(--websiteAccnt2);
     
     width: 25%;
      margin: 25px;
@@ -169,7 +169,7 @@ body{
     padding-bottom: 25px;
     font-weight: 500;
     font-size:35px;
-    color: var(--servicesPgService-h3);
+    color: var(--websiteAccnt);
     width: 100%;
     
 }
@@ -198,10 +198,10 @@ body{
 
 
 .service-pg-banner h3{
-    font-weight: 500;
+    font-weight: 600;
     font-size: 50px;
     padding: 25px;
-    color: var(--websiteAccnt2);
+    color: var(--websiteAccnt3);
     text-align: center;
     line-height: 1.5;
     letter-spacing: 1.5px;
@@ -210,9 +210,17 @@ body{
 
 
 .service-pg-banner a span{
-    font-weight: 500;
-    font-size: 50px;
-    color: var(--websiteAccnt3);
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--websiteAccnt2);
+    text-align: center;
+    
+  
+}
+.service-pg-banner .span3{
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--websiteAccnt2);
     text-align: center;
     
   
@@ -224,6 +232,11 @@ body{
     text-align: start;
     color: var(--service-pg-banner-p-color);
    
+}
+
+
+.service-pg-banner {
+    border-bottom: 2px solid var(--websiteAccnt3)
 }
 
 .servicesPg-services{
@@ -623,7 +636,7 @@ font-size: 23px;
     text-align: center;
     font-size: 60px;
     font-weight: 1000;
-    color: var(--websiteAccnt);
+    color: var(--websiteAccnt3);
 
 }
 .body-tagline{
@@ -1012,4 +1025,11 @@ color: var(--nav-bar-items);
     .span-3 a:hover {
         padding-left: 0;
     }
+}
+
+/*== Hamburger Mobile Nav ==*/
+
+/*Hamburger Hidden on desktop*/
+.hamburger {
+    display: none;
 }
