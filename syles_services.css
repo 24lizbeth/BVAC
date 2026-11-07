@@ -1062,53 +1062,35 @@ color: var(--nav-bar-items);
         overflow-wrap: break-word;
     }
 
+    
     /* =====================================
        NAVIGATION
     ===================================== */
 
+     /* Navbar */
     .nav {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        display: grid;
-        grid-template-columns: 1fr 48px;
-        align-items: center;
-        width: 100%;
-        padding: 10px 16px;
-        background: var(--nav-bar-bg);
-    }
-
-    /*
-      The logo currently sits inside the UL.
-      display: contents allows it to remain
-      visible while the other links are hidden.
-    */
-
-    .nav-main-menu {
-        display: contents;
-    }
-
-    .nav-main-menu > li {
-        display: none;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-main-menu > li:nth-child(3) {
+        position: static !important;
         display: flex;
-        grid-column: 1;
-        grid-row: 1;
+        flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    /* Logo - visible when menu is closed */
+    #navMenu > li:nth-child(3) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .logo img {
         display: block;
-        width: auto;
         max-width: 155px;
         max-height: 55px;
-        object-fit: contain;
+        margin: 0 auto;
     }
+
 
     .hamburger {
         grid-column: 2;
@@ -1156,6 +1138,9 @@ color: var(--nav-bar-items);
         grid-row: auto;
         padding: 5px 0;
     }
+    .nav-menu-open .logo img{
+        display: none;
+    }
 
     .nav.menu-open .nav-main-menu > li:nth-child(3) {
         display: flex;
@@ -1180,6 +1165,7 @@ color: var(--nav-bar-items);
         min-height: 46px;
         margin: 5px 0;
     }
+
 
     /* =====================================
        HERO SECTION
@@ -2150,114 +2136,104 @@ color: var(--nav-bar-items);
         padding: 25px 18px;
     }
 }
+/* =========================
+   MOBILE NAVBAR
+========================= */
 
 @media (max-width: 768px) {
 
-    /* Navbar */
-    .nav {
-        position: static !important;
-        display: flex;
+    /* Main navbar */
+     .nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-height: 95px;
+        padding: 10px 20px;
+    }
+
+    /* Keep the UL visible so the logo can show */
+    .nav-main-menu {
+        display: flex !important;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 12px 16px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
-    /* Logo - visible when menu is closed */
-    #navMenu > li:nth-child(3) {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .logo img {
-        display: block;
-        max-width: 155px;
-        max-height: 55px;
-        margin: 0 auto;
-    }
-
-    /* Hide hamburger when menu is closed */
-    .hamburger {
-        display: none;
-    }
-
-    /* Hide navigation links when closed */
-    #navMenu {
-        display: none;
-    }
-
-    /* Open menu */
-    .nav.menu-open .hamburger {
-        display: flex;
-        align-self: flex-end;
-    }
-
-    .nav.menu-open #navMenu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    /* Hide logo when menu is open */
-    .nav.menu-open #navMenu > li:nth-child(3) {
+    /* Hide every menu item by default */
+    .nav-main-menu > li {
         display: none !important;
     }
 
-    /* Show hamburger when menu opens */
-    .nav.menu-open .hamburger {
-        display: flex;
-    }
-
-    .nav.menu-open #navMenu > li:not(:nth-child(3)) {
-        display: flex;
-        width: 100%;
-    }
-}
- /* =====================================
-       NAVIGATION
-    ===================================== */
-
-     /* Navbar */
-    .nav {
-        position: static !important;
-        display: flex;
-        flex-direction: column;
+    /* SHOW ONLY THE LOGO WHEN CLOSED */
+    .nav-main-menu > li:nth-child(3) {
+        display: flex !important;
+        justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 12px 16px;
+        min-height: 95px;
+        padding: 0px;
+        margin: 0;
     }
 
-    /* Logo - visible when menu is closed */
-    #navMenu > li:nth-child(3) {
+    /* Logo container */
+    .nav-main-menu > li:nth-child(3) .logo {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
     }
 
-    .logo img {
+    .nav-main-menu > li:nth-child(3) .logo a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-main-menu > li:nth-child(3) .logo img {
         display: block;
-        max-width: 155px;
-        max-height: 55px;
-        margin: 0 auto;
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    /* Hamburger hidden while menu is closed */
+    .hamburger {
+        display: grid;
+    
     }
 
 
-    .hamburger {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        justify-self: end;
-        align-items: center;
+    /* =========================
+       MENU OPEN
+    ========================= */
+
+    .nav.menu-open {
+        align-items: stretch;
+        
+    }
+
+    /* Show hamburger when open */
+    .nav.menu-open .hamburger {
+        display: flex !important;
+        align-self: flex-end;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
         gap: 6px;
         width: 44px;
         height: 44px;
         padding: 8px;
+        margin-bottom: 8px;
+        background: transparent;
         border: 1px solid rgba(255,255,255,.3);
         border-radius: 5px;
-        background: transparent;
         cursor: pointer;
     }
 
@@ -2269,122 +2245,23 @@ color: var(--nav-bar-items);
         transition: transform .25s ease, opacity .25s ease;
     }
 
-    .nav.menu-open .hamburger span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .nav.menu-open .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav.menu-open .hamburger span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* Show menu links when opened */
-
-    .nav.menu-open .nav-main-menu > li {
-        display: block;
-        grid-column: 1 / -1;
-        grid-row: auto;
-        padding: 5px 0;
-    }
-    .nav-menu-open .logo img{
-        display: none;
-    }
-
+    /* Hide logo when menu is open */
     .nav.menu-open .nav-main-menu > li:nth-child(3) {
-        display: flex;
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .nav-main-menu .nav-dropdown-row,
-    .nav-main-menu .nav-link {
-        width: 100%;
-    }
-
-    .nav-main-menu a {
-        display: block;
-        padding: 12px 10px;
-        font-size: 16px;
-        text-align: left;
-    }
-
-    .nav-main-menu .cta-btn {
-        width: 100%;
-        min-height: 46px;
-        margin: 5px 0;
-    }
-
-/* =====================================
-   MOBILE NAVIGATION FIX
-===================================== */
-
-@media (max-width: 768px) {
-
-    .nav {
-        position: static !important;
-        top: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        padding: 10px 16px;
-        z-index: 1000;
-    }
-
-    /* Hamburger button */
-    .hamburger {
-        display: flex;
-        align-self: flex-end;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 6px;
-        width: 44px;
-        height: 44px;
-        margin-left: auto;
-        cursor: pointer;
-    }
-
-    /* Hide entire menu when closed */
-    #navMenu {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        gap: 0;
-    }
-
-    /* Show menu when hamburger is clicked */
-    .nav.menu-open #navMenu {
-        display: flex;
-    }
-
-    /* Hide logo while menu is open */
-    .nav.menu-open #navMenu > li:nth-child(3) {
         display: none !important;
     }
 
-    /* Display navigation links */
-    #navMenu > li {
-        display: flex;
+    /* Show all other menu items */
+    .nav.menu-open .nav-main-menu > li:not(:nth-child(3)) {
+        display: flex !important;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        padding: 8px 0;
+        padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,.15);
     }
 
-    #navMenu .nav-dropdown-row,
-    #navMenu .dropdown {
-        width: 100%;
-    }
-
-    #navMenu a {
+    /* Navigation links */
+    .nav.menu-open .nav-main-menu a {
         display: block;
         width: 100%;
         padding: 12px 10px;
@@ -2392,18 +2269,20 @@ color: var(--nav-bar-items);
         font-size: 16px;
     }
 
-    #navMenu .cta-btn {
+    /* CTA buttons */
+    .nav.menu-open .nav-main-menu .cta-btn {
         display: block;
         width: 100%;
         min-height: 46px;
         margin: 5px 0;
+        padding: 12px;
+        border: none;
         border-radius: 15px;
-        background: var(--websiteAccnt2);
         color: var(--about-us-text-h1);
-        border:none
+        background: var(--websiteAccnt2);
     }
 
-    /* Hamburger animation */
+    /* Hamburger transforms into X */
     .nav.menu-open .hamburger span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -2414,11 +2293,5 @@ color: var(--nav-bar-items);
 
     .nav.menu-open .hamburger span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-    }
-    .responsive-form-services, .responsive-form button{
-         border-radius: 15px;
-        background: var(--websiteAccnt2);
-        color: var(--about-us-text-h1);
-        border:none
     }
 }

@@ -3123,26 +3123,92 @@ p {
     }
 }
 
-/* =====================================
-   MOBILE NAVIGATION FIX
-===================================== */
+/* =========================
+   MOBILE NAVBAR
+========================= */
 
 @media (max-width: 768px) {
 
-    .nav {
-        position: static !important;
-        top: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+    /* Main navbar */
+     .nav {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        padding: 10px 16px;
-        z-index: 1000;
+        min-height: 95px;
+        padding: 10px 20px;
     }
 
-    /* Hamburger button */
-    .hamburger {
+    /* Keep the UL visible so the logo can show */
+    .nav-main-menu {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    /* Hide every menu item by default */
+    .nav-main-menu > li {
+        display: none !important;
+    }
+
+    /* SHOW ONLY THE LOGO WHEN CLOSED */
+    .nav-main-menu > li:nth-child(3) {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 95px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    /* Logo container */
+    .nav-main-menu > li:nth-child(3) .logo {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-main-menu > li:nth-child(3) .logo a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-main-menu > li:nth-child(3) .logo img {
+        display: block;
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    /* Hamburger hidden while menu is closed */
+    .hamburger {
+        display: grid;
+    
+    }
+
+
+    /* =========================
+       MENU OPEN
+    ========================= */
+
+    .nav.menu-open {
+        align-items: stretch;
+        
+    }
+
+    /* Show hamburger when open */
+    .nav.menu-open .hamburger {
+        display: flex !important;
         align-self: flex-end;
         justify-content: center;
         align-items: center;
@@ -3150,47 +3216,39 @@ p {
         gap: 6px;
         width: 44px;
         height: 44px;
-        margin-left: auto;
+        padding: 8px;
+        margin-bottom: 8px;
+        background: transparent;
+        border: 1px solid rgba(255,255,255,.3);
+        border-radius: 5px;
         cursor: pointer;
     }
 
-    /* Hide entire menu when closed */
-    #navMenu {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        gap: 0;
+    .hamburger span {
+        display: block;
+        width: 23px;
+        height: 2px;
+        background: white;
+        transition: transform .25s ease, opacity .25s ease;
     }
 
-    /* Show menu when hamburger is clicked */
-    .nav.menu-open #navMenu {
-        display: flex;
-    }
-
-    /* Hide logo while menu is open */
-    .nav.menu-open #navMenu > li:nth-child(3) {
+    /* Hide logo when menu is open */
+    .nav.menu-open .nav-main-menu > li:nth-child(3) {
         display: none !important;
     }
 
-    /* Display navigation links */
-    #navMenu > li {
-        display: flex;
+    /* Show all other menu items */
+    .nav.menu-open .nav-main-menu > li:not(:nth-child(3)) {
+        display: flex !important;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
-        padding: 8px 0;
+        padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,.15);
     }
 
-    #navMenu .nav-dropdown-row,
-    #navMenu .dropdown {
-        width: 100%;
-    }
-
-    #navMenu a {
+    /* Navigation links */
+    .nav.menu-open .nav-main-menu a {
         display: block;
         width: 100%;
         padding: 12px 10px;
@@ -3198,18 +3256,20 @@ p {
         font-size: 16px;
     }
 
-    #navMenu .cta-btn {
+    /* CTA buttons */
+    .nav.menu-open .nav-main-menu .cta-btn {
         display: block;
         width: 100%;
         min-height: 46px;
         margin: 5px 0;
+        padding: 12px;
+        border: none;
         border-radius: 15px;
-        background: var(--websiteAccnt2);
         color: var(--about-us-text-h1);
-        border:none
+        background: var(--websiteAccnt2);
     }
 
-    /* Hamburger animation */
+    /* Hamburger transforms into X */
     .nav.menu-open .hamburger span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
