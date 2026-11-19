@@ -30,7 +30,7 @@ body {
 --footer-txt: #ffffff;
 --nav-bar-bg: #061838;
 --nav-bar-items: #ffffff;
---nav-items-hover:#bacef3;
+--nav-items-hover:#ffffff;
 --logo-color: #e6eaf1;
 --service-card-bg: #7f8e91;
 --cus-bg-color: #061838;
@@ -49,7 +49,7 @@ body {
 --hover-text-color: #468af0;
 --Home-page-bg: #9fa7b3;
 --cards-bg: #d9d9d9;
---link-color: #d5d5df;
+--link-color: #ffffff;
 --link-hover: #93c2ee;
 --about-us-h1: #ffffff;
 --learn-more-btn-bg: #4873b3;
@@ -415,11 +415,11 @@ margin: 20px;
 
 }
 .service{
-    display: grid;
+    
     background: none;
     margin: 15px;
-    border-left: .25rem solid var(--websiteAccnt2);
-    border-bottom: .25rem solid var(--websiteAccnt2);
+    border-left: 2px solid var(--websiteAccnt2);
+    
     padding: 20px;
     
 }
@@ -482,7 +482,7 @@ margin: 20px;
     text-align: start;
 }
 .services-list-conslusion{
-      font-weight: 450;
+    font-weight: 450;
     font-size: 30px;
     padding: 30px;
     text-align: start;
@@ -519,7 +519,7 @@ margin: 20px;
  .responsive-form{
   position: relative;
   width: min(90%, 600px);
-  margin: 50px auto;
+  margin: 10px auto;
   border-radius: 4px;
   border: none;
   background-color: var(--cus-bg-color);
@@ -572,15 +572,16 @@ margin: 20px;
     
 }
 .cus-submit-btn{
-    padding: 1rem;
-    border-radius: 0px;
-    background-color: var(--bg-color);
-    border: .1rem solid var(--websiteAccnt);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--webpage-bg-color);
+    border: .1rem solid var(--website-txt);
     font-size: 20px;
-    font-weight: 350;
+    font-weight: 450;
     color: var(--website-txt);
     justify-content: center;
     display: block;
+    margin:5px;
 }
 input[type=text]{
     background-color: var(--about-us-bg);
@@ -592,26 +593,81 @@ input[type=text]{
 /*===Navigation Bar===*/
 .nav{
     
-    position:sticky;
+    position: sticky;
     top: 0;
    
     align-items: Center;
     
     
     background: var(--nav-bar-bg);
-    color:var(--logo-color);
-    z-index:1000;
-    padding: 5px;
-    border-bottom: none;
-    border-color: black;
-    border-width: thin;
+    color:var(--link-color);
+    z-index: 10;
+    padding: 2px;
+    border-bottom: 1px solid var(--website-txt);
+    height: 120px;
+    
     
 }
+.nav-dropdown-row a{
+    color: var(--link-color);
+    font-size: 20px;
+    font-weight: 400;
+}
+/* Main navigation layout */
+#navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px 15px 15px;
+    box-sizing: border-box;
+}
+
+
+/* Navigation list items */
+#navMenu > li {
+    display: flex;
+    align-items: center;
+    
+    
+    
+}
+#navMenu .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0px;
+    padding-left: 0px;
+    
+}
+
+#navMenu .logo a {
+    display: block;
+    width: 100%;
+    
+    
+}
+  /* Logo container */
+#navMenu .logo {
+    display: block;
+    width: 125px;
+    min-width: 125px;
+    
+    
+}
+
+
+
+
 .hero-tagline h3{
     text-align: center;
     font-size: 50px;
     font-weight: 700;
-    color: var(--websiteAccnt3);
+    color: var(--website-txt);
+    padding: 50px;
 
 }
 .hero-tagline .span1{
@@ -630,111 +686,16 @@ input[type=text]{
 }
 .body-tagline{
     background: var(--body-tagline-bg);
-    margin: 20px;
+    margin-top: 25px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid var(--about-us-bg);
 }
 .body-tagline h3{
     text-align: center;
     font-size: 60px;
     font-weight: 600;
-    color: var(--websiteAccnt2);
-}
-/* Main navigation layout */
-#navMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    width: 100%;
-    margin: 10px;
-    padding: 0px 30px;
-    box-sizing: border-box;
-}
-
-
-/* Navigation list items */
-#navMenu > li {
-    display: flex;
-    align-items: center;
-    
-    
-}
-#navMenu .logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    padding: 10px;
-    padding-left: 0px;
-    
-}
-
-#navMenu .logo a {
-    display: block;
-    width: 100%;
-    
-    
-}
-  /* Logo container */
-#navMenu .logo {
-    display: block;
-    width: 200px;
-    min-width: 150px;
-    
-    
-}
-#navMenu .dropdown a{
-    font-size: 20px;
-    padding: 0px;
-    font-weight: 350;
-    letter-spacing: .1px;
-    
-}
-
-
-.dropdown{
-    position: relative;
-    display: block;
-    
-
-}
-
-
-.dropdown a{
-    position: relative;
-    font-size: 25px;
-    color: var(--nav-bar-items);
-     font-weight: 500;
-}
-.nav-main-menu .dropdown-content{
-    display: none;
-    position:absolute;
-    top: 100%;
-    left: 0;
-
-    background: var(--nav-bar-bg);
-    min-width: 240px;
-
-    border-top: 3px solid var(--nav-accnt);
-    border-radius:0 0 3px 3px;
-
-    animation: slideUp .3s;
-    box-shadow: var(--shadow-1);
-    z-index: 1001;
-    
-}
-
-.dropdown-content li{
-    padding: 10px;
-    
-}
-.dropdown-content li:hover{
-    background: var(--nav-items-hover);
-}
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-.dropdown-link{
-color: var(--nav-bar-items);
+    color: var(--webpage-bg-color);
+    padding-top: 35px;
 }
 
 
@@ -742,40 +703,6 @@ color: var(--nav-bar-items);
 
 
 
-
-/*===Sub Dropdown===*/
-.nav-main-menu .sub-dropdown-content{
-    display: none;
-    position: absolute;
-    top: 7%;
-    left: 100%;
-    background: var(--bg-color);
-    min-width: 240px;
-    border-top: 3px solid var(--nav-accnt);
-    border-radius: 3px;
-    animation: slideUp .3s;
-    box-shadow: var(--shadow-1);
-    z-index:1001;
-}
-@keyframes slideUp{
-    from{
-        margin-top: 20px;
-    }
-    to{
-        margin-top:0;
-    }
-}
-.dropdown-link{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.sub-dropdown:hover .sub-dropdown-content{
-    display: block;
-    position: absolute;
-   
-
-}
 
 /*===Our Work===*/
 .gallery{
@@ -884,13 +811,13 @@ font-size: 25px;
     background: var(--cta-bg);
     font-weight: 500;
     font-size: 25px; 
-    margin: px;
+    margin: 10px;
     
 }
 .cta-btn{
     align-self: center;
     padding: 10px 20px;
-    border-radius: 0px;
+    border-radius: 10px;
     text-align: center;
     border-bottom: solid 2px white;
     color: var(--cta-text);
@@ -1178,7 +1105,7 @@ html,
 body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 img {

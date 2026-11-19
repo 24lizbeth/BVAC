@@ -1,0 +1,55 @@
+
+/*==Resuable CSS===*/
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight:600;   
+}
+
+body{
+   
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Montserrat;
+   
+   
+}
+
+
+
+body {
+    min-height: 100vh;
+    
+    
+}
+
+
+.main-content {
+    flex: 1 0 auto; 
+}
+
+
+/*==Variables===*/
+:root{
+--websiteAccnt: #5c8dad;
+--websiteAccnt2:#b28e69;
+--websiteAccnt3:#a29e9e;
+--website-txt: #ffffff;
+
+}
+
+
+
+.blogPost{
+    background: red;
+    justify-content: center;
+    text-align: center;
+}
