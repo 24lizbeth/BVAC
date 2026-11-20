@@ -145,10 +145,7 @@ body {
 --common-problems-h4:#ffffff;
 --common-problems-p:#ffffff;
 --servicespg-conclusion-p: #ffffff;
---websiteAccnt: #5c8dad;
---websiteAccnt2:#b28e69;
---websiteAccnt3:#a29e9e;
---website-text: #ffffff;
+
 }
 
 
@@ -336,9 +333,8 @@ body {
     display: grid;
     margin-bottom: 100px;
     padding: 10px;
-
-
 }
+
 .faqs button {
     display: block;
     padding: 10px 40px;
@@ -379,14 +375,27 @@ body {
 }
 .faqs-item{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
      
     
 }
-.faqPlus{
-    display: flex;
-    justify-content: end;
+.faqs-item > .faqsQuestion {
+    flex: 1;
+    width: auto;
 }
+
+.faqs-item > .faqsPlus {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+.faqs-item > .faqsAnswer {
+    order: 1;
+    flex: 0 0 100%;
+}
+
+
 
 .faqs-item.active .faqsAnswer {
     display:block;
